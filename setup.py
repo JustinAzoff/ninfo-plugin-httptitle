@@ -15,7 +15,9 @@ setup(name='ninfo-plugin-httptitle',
     packages = find_packages(exclude=["tests"]),
     include_package_data=True,
     install_requires=[
-        "ninfo",
+        "ninfo>=0.6.0",
+        "requests>=2.0.0",
+        "BeautifulSoup>=3.0.0",
     ],
     entry_points = {
         'ninfo.plugin': [
