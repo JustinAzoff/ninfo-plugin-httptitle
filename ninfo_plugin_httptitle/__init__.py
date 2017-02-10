@@ -40,7 +40,7 @@ class httptitle_plug(PluginBase):
         result = {}
         title = self.get_title(arg)
         if title:
-            result['title'] = title
+            result['title'] = title.strip()
         return result
             
 

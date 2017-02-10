@@ -1,1 +1,3 @@
-ninfo
+ninfo>=0.6.1
+requests>=2.0.0
+BeautifulSoup>=3.0.0
