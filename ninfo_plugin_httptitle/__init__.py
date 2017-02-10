@@ -16,8 +16,7 @@ class httptitle_plug(PluginBase):
         pass
 
     def get_title_from_url(self, url):
-        print url
-        resp = requests.get(url, verify=False)
+        resp = requests.get(url, verify=False, timeout=2)
         return BeautifulSoup(resp.content).title.string
 
     def get_title(self, arg):
@@ -33,7 +32,6 @@ class httptitle_plug(PluginBase):
                 title = self.get_title_from_url("{0}://{1}".format(scheme, arg))
                 return title
             except Exception, e:
-                print e
                 pass
 
     def get_info(self, arg):
